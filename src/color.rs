@@ -1,7 +1,7 @@
 use std::ops::{Add, Neg, Sub, Mul, Div};
 use crate::utils::fp_approx_eq;
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub struct Color {
     pub r: f32,
     pub g: f32,
@@ -78,7 +78,7 @@ impl PartialEq for Color {
 
 impl Color {
 
-    fn new(r: f32, g: f32, b: f32) -> Color {
+    pub fn new(r: f32, g: f32, b: f32) -> Color {
         Color { r, g, b }
     }
 
